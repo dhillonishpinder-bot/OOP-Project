@@ -94,6 +94,18 @@ namespace ConnectFour
 
       return false;
   }
+      public bool IsBoardFull()
+  {
+      for (int col = 0; col < Columns; col++)
+      {
+          if (board[0, col] == '.')
+          {
+              return false;
+          }
+      }
+
+      return true;
+  }
             
     public class Controller
     {
