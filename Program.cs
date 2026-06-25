@@ -23,10 +23,18 @@ namespace ConnectFour
     }
 
     public abstract class Player
+{
+    public string Name { get; private set; }
+    public char Symbol { get; private set; }
+
+    public Player(string name, char symbol)
     {
-        public string Name { get; set; } = "";
-        public char Symbol { get; set; }
+        Name = name;
+        Symbol = symbol;
     }
+
+    public abstract int GetMove();
+}
 
     public class HumanPlayer : Player
     {
