@@ -61,6 +61,26 @@ namespace ConnectFour
                 }
             }
         }
+
+        public void DisplayBoard()
+       {
+           Console.Clear();
+
+           Console.WriteLine(" 1 2 3 4 5 6 7");
+
+           for (int row = 0; row < Rows; row++)
+           {
+               for (int col = 0; col < Columns; col++)
+               {
+                   Console.Write(" " + board[row, col]);
+               }
+
+               Console.WriteLine();
+           }
+
+           Console.WriteLine();
+       }
+            
     public class Controller
     {
         private GameBoard board;
@@ -71,21 +91,6 @@ namespace ConnectFour
         }
     }
 
-    public class GameBoard
-    {
-        private char[,] board;
-
-        public GameBoard()
-        {
-            board = new char[6, 7];
-        }
-    }
-
-
-   public class HumanPlayer:Player
-   {    
-      
-   }
 
     public class View
     {
