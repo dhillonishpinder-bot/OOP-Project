@@ -106,6 +106,10 @@ namespace ConnectFour
 
       return true;
   }
+    public bool CheckWin(char symbol)
+{
+
+}
             
     public class Controller
     {
