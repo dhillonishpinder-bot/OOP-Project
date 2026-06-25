@@ -36,9 +36,9 @@ namespace ConnectFour
     public abstract int GetMove();
 }
 
-    public class HumanPlayer : Player
-    {
-    }
+   public HumanPlayer(string name, char symbol):base(name, symbol)
+   {
+   }
 
     public class View
     {
