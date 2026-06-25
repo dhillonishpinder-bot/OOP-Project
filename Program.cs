@@ -65,3 +65,30 @@ namespace ConnectFour
 
         public abstract int GetMove();
     }
+
+    // Human Player Class
+    public class HumanPlayer : Player
+    {
+        public HumanPlayer(string name, char symbol)
+            : base(name, symbol)
+        {
+        }
+
+        public override int GetMove()
+        {
+            while (true)
+            {
+                Console.Write($"{Name}, choose a column (1-7): ");
+
+                if (int.TryParse(Console.ReadLine(), out int column))
+                {
+                    if (column >= 1 && column <= 7)
+                    {
+                        return column - 1;
+                    }
+                }
+
+                Console.WriteLine("Invalid input. Please enter a number from 1 to 7.");
+            }
+        }
+    }
