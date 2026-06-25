@@ -2,6 +2,19 @@
 
 namespace ConnectFour
 {
+    public abstract class Player
+{
+    public string Name { get; set; }
+    public char Symbol { get; set; }
+
+    public Player(string name, char symbol)
+    {
+        Name = name;
+        Symbol = symbol;
+    }
+
+    public abstract int GetMove();
+}
     public class Controller
     {
         private GameBoard board;
@@ -22,22 +35,10 @@ namespace ConnectFour
         }
     }
 
-    public abstract class Player
-{
-    public string Name { get; private set; }
-    public char Symbol { get; private set; }
 
-    public Player(string name, char symbol)
-    {
-        Name = name;
-        Symbol = symbol;
-    }
-
-    public abstract int GetMove();
-}
-
-   public HumanPlayer(string name, char symbol):base(name, symbol)
-   {
+   public class HumanPlayer:Player
+   {    
+      
    }
 
     public class View
