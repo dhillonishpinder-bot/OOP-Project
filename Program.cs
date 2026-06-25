@@ -92,3 +92,23 @@ namespace ConnectFour
             }
         }
     }
+
+     // GameBoard Class
+    public class GameBoard
+    {
+        private const int Rows = 6;
+        private const int Columns = 7;
+        private char[,] board;
+
+        public GameBoard()
+        {
+            board = new char[Rows, Columns];
+
+            for (int row = 0; row < Rows; row++)
+            {
+                for (int col = 0; col < Columns; col++)
+                {
+                    board[row, col] = '.';
+                }
+            }
+        }
