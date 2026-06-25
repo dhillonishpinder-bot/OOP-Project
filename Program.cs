@@ -122,6 +122,21 @@ namespace ConnectFour
                         }
               }
           }
+
+         // Vertical
+             for (int row = 0; row < Rows - 3; row++)
+             {
+                 for (int col = 0; col < Columns; col++)
+                 {
+                     if (board[row, col] == symbol &&
+                         board[row + 1, col] == symbol &&
+                         board[row + 2, col] == symbol &&
+                         board[row + 3, col] == symbol)
+                     {
+                         return true;
+                     }
+                 }
+             }
 }
             
     public class Controller
