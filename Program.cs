@@ -46,3 +46,22 @@ namespace ConnectFour
         }
     }
 }
+
+using System;
+
+namespace ConnectFour
+{
+    // Player Abstract Class
+    public abstract class Player
+    {
+        public string Name { get; private set; }
+        public char Symbol { get; private set; }
+
+        public Player(string name, char symbol)
+        {
+            Name = name;
+            Symbol = symbol;
+        }
+
+        public abstract int GetMove();
+    }
