@@ -80,6 +80,20 @@ namespace ConnectFour
 
            Console.WriteLine();
        }
+
+         public bool DropDisc(int column, char symbol)
+  {
+      for (int row = Rows - 1; row >= 0; row--)
+      {
+          if (board[row, column] == '.')
+          {
+              board[row, column] = symbol;
+              return true;
+          }
+      }
+
+      return false;
+  }
             
     public class Controller
     {
