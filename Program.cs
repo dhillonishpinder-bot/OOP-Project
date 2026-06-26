@@ -183,6 +183,41 @@ namespace ConnectFour
 
     public class View
     {
+        View Classpublic class View    {
+
+        public void ShowWelcome()
+
+        {
+
+            Console.WriteLine("=================================");
+
+            Console.WriteLine("         CONNECT FOUR");
+
+            Console.WriteLine("=================================");
+
+            Console.WriteLine();
+
+        }
+
+
+        public void ShowWinner(string playerName)
+
+        {
+
+            Console.WriteLine($"{playerName} wins the game!");
+
+        }
+
+
+        public void ShowDraw()
+
+        {
+
+            Console.WriteLine("The game ended in a draw.");
+
+        }
+
+    }
     }
 
     internal class Program
@@ -195,6 +230,9 @@ namespace ConnectFour
         }
     }
 }
+
+
+
 
 
 
