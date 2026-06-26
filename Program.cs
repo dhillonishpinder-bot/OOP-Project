@@ -580,29 +580,4 @@ namespace ConnectFour
         }
     }
 
-    // Main Programinternal class Program    {
-        static void Main(string[] args)
-        {
-            bool playAgain = true;
-
-            while (playAgain)
-            {
-                View view = new View();
-                view.ShowWelcome();
-
-                Controller game = new Controller();
-                game.StartGame();
-
-                Console.WriteLine();
-                Console.Write("Play again? (Y/N): ");
-
-                string answer = Console.ReadLine().ToUpper();
-
-                playAgain = answer == "Y";
-            }
-
-            Console.WriteLine("Thank you for playing Connect Four!");
-        }
-    }
-}
- 
+    
