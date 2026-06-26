@@ -258,6 +258,79 @@ namespace ConnectFour
         }
 
 
+    public void StartGame()
+
+        {
+
+            Player currentPlayer = player1;
+
+
+            while (true)
+
+            {
+
+                board.DisplayBoard();
+
+
+                int column = currentPlayer.GetMove();
+
+
+                if (!board.DropDisc(column, currentPlayer.Symbol))
+
+                {
+
+                    Console.WriteLine("That column is full.");
+
+                    Console.WriteLine("Press any key to continue...");
+
+                    Console.ReadKey();
+
+                    continue;
+
+                }
+
+
+                if (board.CheckWin(currentPlayer.Symbol))
+
+                {
+
+                    board.DisplayBoard();
+
+                    view.ShowWinner(currentPlayer.Name);
+
+                    break;
+
+                }
+
+
+                if (board.IsBoardFull())
+
+                {
+
+                    board.DisplayBoard();
+
+                    view.ShowDraw();
+
+                    break;
+
+                }
+
+
+                currentPlayer = currentPlayer == player1
+
+                    ? player2
+
+                    : player1;
+
+            }
+
+        }
+
+    }
+
+
+
+
 
     internal class Program
     {
