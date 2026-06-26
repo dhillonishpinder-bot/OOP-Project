@@ -370,6 +370,7 @@ namespace ConnectFour
         }
     }
 
+
     // Game Boardpublic class GameBoard    {
         private const int Rows = 6;
         private const int Columns = 7;
@@ -434,6 +435,7 @@ namespace ConnectFour
 
             return true;
         }
+
 
         public bool CheckWin(char symbol)
         {
