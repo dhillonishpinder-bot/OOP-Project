@@ -604,28 +604,3 @@ namespace ConnectFour
     }
 }
  
-
-
-
-
-
-    internal class Program
-    {
-        static void Main(string[] args)
-        {
-            Controller game = new Controller();
-
-            Console.WriteLine("Connect Four");
-        }
-    }
-}
-
-
-
-
-
-
-
-
-     // GameBoard Class
-
