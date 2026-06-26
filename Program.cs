@@ -220,6 +220,45 @@ namespace ConnectFour
     }
     }
 
+    // Controller Classpublic class Controller    {
+
+        private GameBoard board;
+
+        private View view;
+
+
+        private HumanPlayer player1;
+
+        private HumanPlayer player2;
+
+
+        public Controller()
+
+        {
+
+            board = new GameBoard();
+
+            view = new View();
+
+
+            Console.Write("Enter Player 1 Name: ");
+
+            string playerOneName = Console.ReadLine();
+
+
+            Console.Write("Enter Player 2 Name: ");
+
+            string playerTwoName = Console.ReadLine();
+
+
+            player1 = new HumanPlayer(playerOneName, 'X');
+
+            player2 = new HumanPlayer(playerTwoName, 'O');
+
+        }
+
+
+
     internal class Program
     {
         static void Main(string[] args)
